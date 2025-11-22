@@ -15,7 +15,8 @@ public:
  if(!root) return;
         if(!root->left&&!root->right){
             str = str + to_string(root->val);
-            ans.push_back(str);      
+            ans.push_back(str); 
+            return;     
         }
          str=str+ to_string(root->val);
         if(root->left){
