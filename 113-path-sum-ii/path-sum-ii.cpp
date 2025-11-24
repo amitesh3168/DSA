@@ -13,19 +13,18 @@ class Solution {
 public:
     void path(TreeNode* root, int targetSum,vector<vector<int>>& ans, vector<int>fix){
         if (!root) return;
-fix.push_back(root->val);
-         if(!root->right && !root->left && root->val==targetSum){
+        fix.push_back(root->val);
+        if(!root->right && !root->left && root->val==targetSum){
            
             ans.push_back(fix);
             return;
-         }
-         
+         } 
         else{
         path(root->left,targetSum-root->val, ans, fix);
     
         path(root->right,targetSum-root->val, ans,fix);
 }
-         fix.pop_back();
+        // fix.pop_back();
     }
     vector<vector<int>> pathSum(TreeNode* root, int targetSum) {
         vector<vector<int>>ans;
