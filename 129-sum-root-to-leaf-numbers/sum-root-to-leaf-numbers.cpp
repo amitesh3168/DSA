@@ -16,18 +16,15 @@ public:
         if(!root->left&&!root->right){
             str = str + to_string(root->val);
             ans.push_back(str); 
-            return;     
-        }
-         str=str+ to_string(root->val);
+            return;      }
+             
+        str=str+ to_string(root->val);
         if(root->left){
-           
              rasta(root->left,ans ,  str);
         }
-         if(root->right){
-            
+         if(root->right){ 
             rasta(root->right, ans, str);
-        }
-        return ;
+        }return ;
  }
     int sumNumbers(TreeNode* root) {
         vector<string> ans;
