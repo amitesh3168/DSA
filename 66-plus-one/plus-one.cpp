@@ -27,8 +27,10 @@ public:
         if(idx<0){
         vector<int>arr(n+1);
         arr[0]=1;
-            for(int i=1;i<n;i++){
-                arr[i]=digits[i];
+        int j=1;
+            for(int i=0;i<n;i++){
+                arr[j]=digits[i];
+                j++;
             }
             return arr;
         }
