@@ -21,10 +21,8 @@ public:
           }
 
           if(idx<0){
-
             break;
           }
-
         }
         if(idx<0){
         vector<int>arr(n+1);
