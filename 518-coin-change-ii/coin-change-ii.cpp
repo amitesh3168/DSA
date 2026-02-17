@@ -6,7 +6,7 @@ public:
         if(i>=n) return 0;
         if(dp[i][amount]!=-1) return dp[i][amount];
         if(coins[i]>amount) {
-            return dp[i][amount]  =coin(coins, amount, i+1, n);
+            return coin(coins, amount, i+1, n);
         }
 
         int take = coin(coins, amount-coins[i], i, n);
